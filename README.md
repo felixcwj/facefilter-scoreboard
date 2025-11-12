@@ -3,11 +3,11 @@
 Pipeline that scores face filters by fusing FaceNet similarity and LPIPS style distance, then exports matrix+raw Excel reports with auto-formatting.
 
 ## Features
-- Detects source images automatically (shortest filename per folder).
+- Detects the source image automatically (shortest filename per folder).
 - Computes FaceNet cosine similarity (512-dim embeddings) and LPIPS-VGG style distance.
 - Dynamically mixes scores (FaceNet-only when style distance < 0.02, otherwise 0.3/0.7 weights).
 - Generates a single Excel file with matrix & raw sheets, centered values, and red highlights for scores >= 80.
-- Skips sensitive data (`input/`, `output/`, `.txt`) via `.gitignore` to keep the repo lightweight.
+- Keeps the repo lightweight via `.gitignore` (inputs, outputs, Excel artifacts excluded).
 
 ## Project Structure
 ```
@@ -38,7 +38,7 @@ filter/
 ## Notes
 - Change LPIPS backbone via `--lpips-net` (default `vgg`, also accepts `alex` or `squeeze`).
 - Adjust sensitivity using `--style-threshold` (default `0.02`) and `--style-distance-cap` (default `0.2`).
-- The repo intentionally excludes raw images and Excel outputs; only code/config remains.
+- Repository intentionally excludes raw images and Excel outputs; only code/config remains.
 
 ## License
 Released under the MIT License. See [LICENSE](LICENSE) for details.
