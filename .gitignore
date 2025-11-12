@@ -1,0 +1,22 @@
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Local data/results
+input/
+output/
+*.xlsx
+*.csv
+*.txt
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+*.log
+messi/
